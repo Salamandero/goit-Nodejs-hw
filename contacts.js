@@ -2,7 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const crypto = require("crypto");
 
-const contactsPath = path.resolve(__dirname, ".", "db", "contacts.json");
+const contactsPath = path.resolve(__dirname, "db", "contacts.json");
 console.log("contactsPath", contactsPath);
 
 const listContacts = async () => {
@@ -48,4 +48,9 @@ const removeContact = async (contactId) => {
   }
 };
 
-module.exports = { listContacts, getContactById, removeContact, addContact };
+module.exports = {
+  listContacts,
+  getContactById,
+  removeContact,
+  addContact,
+};
